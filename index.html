@@ -1,92 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Document</title>
-	<link rel="stylesheet" href="/style/style.css">
+	<link rel="stylesheet" href="/style/style.css" />
+
 </head>
+
 <body>
 	<h1>Application Form</h1>
-	<form id="applicationForm" onsubmit="storeData(event)">
+	<form id="applicationForm">
 		<fieldset id="step1">
 			<legend>Personal Information</legend>
 			<label for="firstName">First Name:</label>
-			<input type="text" id="firstName" name="firstName" required>
+			<input type="text" id="firstName" name="firstName" required />
 			<label for="lastName">Last Name:</label>
-			<input type="text" id="lastName" name="lastName" required><br><br>
+			<input type="text" id="lastName" name="lastName" required /><br /><br />
 			<label for="dob">Date of Birth:</label>
-			<input type="date" id="dob" name="dob" required><br><br>
+			<input type="date" id="dob" name="dob" required /><br /><br />
 			<label for="email">Email:</label>
-			<input type="email" id="email" name="email" required><br><br>
+			<input type="email" id="email" name="email" required /><br /><br />
 			<label for="fatherFirstName">Father's First Name:</label>
-			<input type="text" id="fatherFirstName" name="fatherFirstName" required>
+			<input type="text" id="fatherFirstName" name="fatherFirstName" required />
 			<label for="fatherLastName">Last Name:</label>
-			<input type="text" id="fatherLastName" name="fatherLastName" required><br><br>
+			<input type="text" id="fatherLastName" name="fatherLastName" required /><br /><br />
 			<label for="motherFirstName">Mother's First Name:</label>
-			<input type="text" id="motherFirstName" name="motherFirstName" required>
+			<input type="text" id="motherFirstName" name="motherFirstName" required />
 			<label for="motherLastName">Last Name:</label>
-			<input type="text" id="motherLastName" name="motherLastName" required><br><br>
+			<input type="text" id="motherLastName" name="motherLastName" required /><br /><br />
 			<label for="gender">Gender:</label>
-			<input type="radio" id="male" name="gender" value="male" required>
+			<input type="radio" id="male" name="gender" value="male" required />
 			<label for="male">Male</label>
-			<input type="radio" id="female" name="gender" value="female" required>
-			<label for="female">Female</label><br><br>
+			<input type="radio" id="female" name="gender" value="female" required />
+			<label for="female">Female</label><br /><br />
 			<label for="nationality">Nationality:</label>
-			<input type="text" id="nationality" name="nationality" required><br><br>
+			<input type="text" id="nationality" name="nationality" required /><br /><br />
 			<label for="streetAddress">Street Address:</label>
-			<textarea id="streetAddress" name="streetAddress" required></textarea><br><br>
+			<textarea id="streetAddress" name="streetAddress" required></textarea><br /><br />
 			<label for="city">City:</label>
-			<input type="text" id="city" name="city" required>
+			<input type="text" id="city" name="city" required />
 			<label for="country">Country:</label>
-			<input type="text" id="country" name="country" required><br><br>
+			<input type="text" id="country" name="country" required /><br /><br />
 			<label for="mobile">Mobile:</label>
-			<input type="tel" id="mobile" name="mobile" required><br><br>
+			<input type="tel" id="mobile" name="mobile" required /><br /><br />
 			<button type="button" onclick="nextStep(1)">Next</button>
 		</fieldset>
-		
-		<fieldset id="step2" style="display:none">
+
+		<fieldset id="step2" style="display: none">
 			<legend>Educational Information</legend>
 			<label for="hscInstitution">HSC Institution Name:</label>
-			<input type="text" id="hscInstitution" name="hscInstitution" required><br><br>
+			<input type="text" id="hscInstitution" name="hscInstitution" required /><br /><br />
 			<label for="hscBoard">HSC Board:</label>
-			<input type="text" id="hscBoard" name="hscBoard" required><br><br>
+			<input type="text" id="hscBoard" name="hscBoard" required /><br /><br />
 			<label for="hscScore">HSC Score:</label>
-			<input type="number" id="hscScore" name="hscScore" min="0" max="100" step="0.01" required>%<br><br>
-            <label for="sscInstitution">SSC Institution Name:</label>
-            <input type="text" id="sscInstitution" name="sscInstitution" required><br><br>
-            <label for="sscBoard">SSC Board:</label>
-            <input type="text" id="sscBoard" name="sscBoard" required><br><br>
-            <label for="sscScore">SSC Score:</label>
-            <input type="number" id="sscScore" name="sscScore" min="0" max="100" step="0.01" required>%<br><br>
-            <label for="currentlyPursuing">Currently Pursuing:</label>
-            <input type="text" id="currentlyPursuing" name="currentlyPursuing" required><br><br>
-            <label for="currentInstitution">Current Educational Institution Name:</label>
-            <input type="text" id="currentInstitution" name="currentInstitution" required><br><br>
-            <label for="overallScore">Overall Percentage:</label>
-            <input type="number" id="overallScore" name="overallScore" min="0" max="100" step="0.01" required>%<br><br>
-            <label for="backlogs">Current Backlogs:</label>
-            <input type="number" id="backlogs" name="backlogs" min="0" required><br><br>
-            <button type="button" onclick="prevStep(2)">Previous</button>
-            <button type="button" onclick="nextStep(2)">Next</button>
-        </fieldset>
+			<input type="number" id="hscScore" name="hscScore" min="0" max="100" step="0.01" required />%<br /><br />
+			<label for="sscInstitution">SSC Institution Name:</label>
+			<input type="text" id="sscInstitution" name="sscInstitution" required /><br /><br />
+			<label for="sscBoard">SSC Board:</label>
+			<input type="text" id="sscBoard" name="sscBoard" required /><br /><br />
+			<label for="sscScore">SSC Score:</label>
+			<input type="number" id="sscScore" name="sscScore" min="0" max="100" step="0.01" required />%<br /><br />
+			<label for="currentlyPursuing">Currently Pursuing:</label>
+			<input type="text" id="currentlyPursuing" name="currentlyPursuing" required /><br /><br />
+			<label for="currentInstitution">Current Educational Institution Name:</label>
+			<input type="text" id="currentInstitution" name="currentInstitution" required /><br /><br />
+			<label for="overallScore">Overall Percentage:</label>
+			<input type="number" id="overallScore" name="overallScore" min="0" max="100" step="0.01"
+				required />%<br /><br />
+			<label for="backlogs">Current Backlogs:</label>
+			<input type="number" id="backlogs" name="backlogs" min="0" required /><br /><br />
+			<button type="button" onclick="prevStep(2)">Previous</button>
+			<button type="button" onclick="nextStep(2)">Next</button>
+		</fieldset>
 
-        <fieldset id="step3" style="display:none">
-            <legend>Upload Documents</legend>
-            <label for="photo">Recent Passport Size Photograph:</label>
-            <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
-            <label for="hscMarksheet">HSC Mark Sheet:</label>
-            <input type="file" id="hscMarksheet" name="hscMarksheet" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required><br><br>
-            <label for="sscMarksheet">SSC Mark Sheet:</label>
-            <input type="file" id="sscMarksheet" name="sscMarksheet" accept="image/*,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required><br><br>
-            <label for="allMarksheets">All Semesters Mark Sheet in a Single PDF or Docs:</label>
-            <input type="file" id="allMarksheets" name="allMarksheets" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required><br><br>
-            <button type="button" onclick="prevStep(3)">Previous</button>
-            <button type="submit">Submit</button>
-        </fieldset>
-    </form>
+		<fieldset id="step3" style="display: none">
+			<legend>Upload Documents</legend>
+			<label for="photo">Recent Passport Size Photograph:</label>
+			<input type="file" id="photo" name="photo" required /><br /><br />
+			<label for="hscMarksheet">HSC Mark Sheet:</label>
+			<input type="file" id="hscMarksheet" name="hscMarksheet" required /><br /><br />
+			<label for="sscMarksheet">SSC Mark Sheet:</label>
+			<input type="file" id="sscMarksheet" name="sscMarksheet" required /><br /><br />
+			<label for="allMarksheets">All Semesters Mark Sheet in a Single PDF or Docs:</label>
+			<input type="file" id="allMarksheets" name="allMarksheets" required /><br /><br />
+			<button type="button" onclick="prevStep(3)">Previous</button>
+			<br><br><br>
+			<input type="button" value="Submit" onclick="storeData()">
+		</fieldset>
+	</form>
 
 	<script src="/script/script.js"></script>
 </body>
+
 </html>

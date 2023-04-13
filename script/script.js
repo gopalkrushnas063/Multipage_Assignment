@@ -13,70 +13,8 @@ function prevStep(step) {
 
 
 
-
-
-// Constructor For Form Data
-function ApplicantDetails(
-  firstName,
-  lastName,
-  dob,
-  email,
-  fatherFirstName,
-  fatherLastName,
-  motherFirstName,
-  motherLastName,
-  nationality,
-  streetAddress,
-  city,
-  country,
-  mobile,
-  hscInstitution,
-  hscBoard,
-  hscScore,
-  sscInstitution,
-  sscBoard,
-  sscScore,
-  currentlyPursuing,
-  currentInstitution,
-  overallScore,
-  backlogs,
-  photo,
-  hscMarksheet,
-  sscMarksheet,
-  allMarksheets
-) {
-  (this.firstName = firstName),
-    (this.lastName = lastName),
-    (this.dob = dob),
-    (this.email = email),
-    (this.fatherFirstName = fatherFirstName),
-    (this.fatherLastName = fatherLastName),
-    (this.motherFirstName = motherFirstName),
-    (this.motherLastName = motherLastName),
-    (this.nationality = nationality),
-    (this.streetAddress = streetAddress),
-    (this.city = city),
-    (this.country = country),
-    (this.mobile = mobile),
-    (this.hscInstitution = hscInstitution),
-    (this.hscBoard = hscBoard),
-    (this.hscScore = hscScore),
-    (this.sscInstitution = sscInstitution),
-    (this.sscBoard = sscBoard),
-    (this.sscScore = sscScore),
-    (this.currentlyPursuing = currentlyPursuing),
-    (this.currentInstitution = currentInstitution),
-    (this.overallScore = overallScore),
-    (this.backlogs = backlogs),
-    (this.photo = photo),
-    (this.hscMarksheet = hscMarksheet),
-    (this.sscMarksheet = sscMarksheet),
-    (this.allMarksheets = allMarksheets);
-}
-
 // Function to validate the form
-function storeData(event) {
-  event.preventDefault();
+function storeData() {
 
   // Get form elements
   var firstName = document.getElementById("firstName").value;
@@ -98,82 +36,81 @@ function storeData(event) {
   var sscInstitution = document.getElementById("sscInstitution").value;
   var sscBoard = document.getElementById("sscBoard").value;
   var sscScore = document.getElementById("sscScore").value;
-  var currentlyPursuing = document.getElementById("currentlyPursuing").value;
-  var currentInstitution = document.getElementById("currentInstitution").value;
+  var currentlyPursuing =
+    document.getElementById("currentlyPursuing").value;
+  var currentInstitution =
+    document.getElementById("currentInstitution").value;
   var overallScore = document.getElementById("overallScore").value;
   var backlogs = document.getElementById("backlogs").value;
-  var photo = document.getElementById("photo").value;
-  var hscMarksheet = document.getElementById("hscMarksheet").value;
-  var sscMarksheet = document.getElementById("sscMarksheet").value;
-  var allMarksheets = document.getElementById("allMarksheets").value;
+  var photo = document.getElementById("photo").files[0];
+  var hscMarksheet = document.getElementById("hscMarksheet").files[0];
+  var sscMarksheet = document.getElementById("sscMarksheet").files[0];
+  var allMarksheets = document.getElementById("allMarksheets").files[0];
 
-  // Perform validation
-  if (
-    firstName === "" ||
-    lastName === "" ||
-    dob === "" ||
-    email === "" ||
-    fatherFirstName === "" ||
-    fatherLastName === "" ||
-    motherFirstName === "" ||
-    motherLastName === "" ||
-    nationality === "" ||
-    streetAddress === "" ||
-    city === "" ||
-    country === "" ||
-    mobile === "" ||
-    hscInstitution === "" ||
-    hscBoard === "" ||
-    hscScore === "" ||
-    sscInstitution === "" ||
-    sscBoard === "" ||
-    sscScore === "" ||
-    currentlyPursuing === "" ||
-    currentInstitution === "" ||
-    overallScore === "" ||
-    backlogs === ""
-  ) {
-    alert("Please fill in all fields");
-  }
 
-  let formData = new ApplicantDetails(
-    firstName,
-    lastName,
-    dob,
-    email,
-    fatherFirstName,
-    fatherLastName,
-    motherFirstName,
-    motherLastName,
-    nationality,
-    streetAddress,
-    city,
-    country,
-    mobile,
-    hscInstitution,
-    hscBoard,
-    hscScore,
-    sscInstitution,
-    sscBoard,
-    sscScore,
-    currentlyPursuing,
-    currentInstitution,
-    overallScore,
-    backlogs,
-    photo,
-    hscMarksheet,
-    sscMarksheet,
-    allMarksheets
-  );
+  // Convert photo and marksheets files to Base64 strings
+  var photoUrl = "";
+  var hscMarksheetUrl = "";
+  var sscMarksheetUrl = "";
+  var allMarksheetsUrl = "";
 
-  let formDataLS = JSON.parse(localStorage.getItem("applicant")) || [];
+  var fileReader = new FileReader();
 
-  // Store form data in localStorage
-  formDataLS.push(formData);
+  fileReader.onload = function () {
+    photoUrl = fileReader.result;
 
-  // Convert form data to JSON string && Store form data in localStorage with a key
-  localStorage.setItem("applicant", JSON.stringify(formDataLS));
+    var fileReader2 = new FileReader();
+    fileReader2.onload = function () {
+      hscMarksheetUrl = fileReader2.result;
 
-  alert("Registration Successfuly Done !");
-  window.location.reload();
+      var fileReader3 = new FileReader();
+      fileReader3.onload = function () {
+        sscMarksheetUrl = fileReader3.result;
+
+        var fileReader4 = new FileReader();
+        fileReader4.onload = function () {
+          allMarksheetsUrl = fileReader4.result;
+
+          // Create an object to store form data
+          var formData = {
+            firstName: firstName,
+            lastName: lastName,
+            dob: dob,
+            email: email,
+            fatherFirstName: fatherFirstName,
+            fatherLastName: fatherLastName,
+            motherFirstName: motherFirstName,
+            motherLastName: motherLastName,
+            nationality: nationality,
+            streetAddress: streetAddress,
+            city: city,
+            country: country,
+            mobile: mobile,
+            hscInstitution: hscInstitution,
+            hscBoard: hscBoard,
+            hscScore: hscScore,
+            sscInstitution: sscInstitution,
+            sscBoard: sscBoard,
+            sscScore: sscScore,
+            currentlyPursuing: currentlyPursuing,
+            currentInstitution: currentInstitution,
+            overallScore: overallScore,
+            backlogs: backlogs,
+            photo: photoUrl,
+            hscMarksheet: hscMarksheetUrl,
+            sscMarksheet: sscMarksheetUrl,
+            allMarksheets: allMarksheetsUrl,
+          };
+
+          // Save form data in localStorage
+          localStorage.setItem("formData", JSON.stringify(formData));
+          alert("Form data saved in localStorage!");
+        };
+        fileReader4.readAsDataURL(allMarksheets);
+      };
+      fileReader3.readAsDataURL(sscMarksheet);
+    };
+    fileReader2.readAsDataURL(hscMarksheet);
+  };
+  fileReader.readAsDataURL(photo);
 }
