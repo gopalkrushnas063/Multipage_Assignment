@@ -105,6 +105,7 @@ function storeData() {
           // Save form data in localStorage
           localStorage.setItem("formData", JSON.stringify(formData));
           alert("Form data saved in localStorage!");
+          window.location.reload();
         };
         fileReader4.readAsDataURL(allMarksheets);
       };
