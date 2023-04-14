@@ -12,7 +12,7 @@
 
 <h3>Software Requirements</h3>
   
-| Command | Description |
+| Tools | Description |
 | --- | --- |
 | Operating System | Windows 10, Linux |
 | Programming Language | HTML,CSS,JavaScript |
