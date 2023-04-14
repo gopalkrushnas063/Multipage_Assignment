@@ -60,7 +60,7 @@
                                         <td>
                                             <b>Nationality : </b><span id="nationality"> Indian</span>
                                         </td>
-                                        <td><b>Sex: </b>M</td>
+                                        <td><b>Sex: </b><span id="gender">Gender</span></td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -182,6 +182,7 @@
     document.getElementById("mothersName").innerText =
         data.motherFirstName + " " + data.motherLastName;
     document.getElementById("nationality").innerText = data.nationality;
+    document.getElementById("gender").innerText = data.gender;
     document.getElementById("streetAddress").innerText = data.streetAddress;
     document.getElementById("city").innerText = data.city;
     document.getElementById("country").innerText = data.country;

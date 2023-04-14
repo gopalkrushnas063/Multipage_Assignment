@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Document</title>
 	<link rel="stylesheet" href="/style/style.css" />
-
 </head>
 
 <body>
@@ -31,11 +30,15 @@
 			<input type="text" id="motherFirstName" name="motherFirstName" required />
 			<label for="motherLastName">Last Name:</label>
 			<input type="text" id="motherLastName" name="motherLastName" required /><br /><br />
-			<label for="gender">Gender:</label>
-			<input type="radio" id="male" name="gender" value="male" required />
-			<label for="male">Male</label>
-			<input type="radio" id="female" name="gender" value="female" required />
-			<label for="female">Female</label><br /><br />
+
+			<select for="gender" id="gender">
+				<option value="">Gender</option>
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+			</select>
+			<br /><br /><br>
+
+
 			<label for="nationality">Nationality:</label>
 			<input type="text" id="nationality" name="nationality" required /><br /><br />
 			<label for="streetAddress">Street Address:</label>
@@ -81,14 +84,20 @@
 			<label for="photo">Recent Passport Size Photograph:</label>
 			<input type="file" id="photo" name="photo" required /><br /><br />
 			<label for="hscMarksheet">HSC Mark Sheet:</label>
-			<input type="file" id="hscMarksheet" name="hscMarksheet" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required /><br /><br />
+			<input type="file" id="hscMarksheet" name="hscMarksheet"
+				accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+				required /><br /><br />
 			<label for="sscMarksheet">SSC Mark Sheet:</label>
-			<input type="file" id="sscMarksheet" name="sscMarksheet" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required /><br /><br />
+			<input type="file" id="sscMarksheet" name="sscMarksheet"
+				accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+				required /><br /><br />
 			<label for="allMarksheets">All Semesters Mark Sheet in a Single PDF or Docs:</label>
-			<input type="file" id="allMarksheets" name="allMarksheets" accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required /><br /><br />
+			<input type="file" id="allMarksheets" name="allMarksheets"
+				accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+				required /><br /><br />
 			<button type="button" onclick="prevStep(3)">Previous</button>
-			<br><br><br>
-			<input type="button" value="Submit" onclick="storeData()">
+			<br /><br /><br />
+			<input type="button" value="Submit" onclick="storeData()" />
 		</fieldset>
 	</form>
 

@@ -21,6 +21,7 @@ function storeData() {
   var fatherLastName = document.getElementById("fatherLastName").value;
   var motherFirstName = document.getElementById("motherFirstName").value;
   var motherLastName = document.getElementById("motherLastName").value;
+  var gender = document.getElementById("gender").value;
   var nationality = document.getElementById("nationality").value;
   var streetAddress = document.getElementById("streetAddress").value;
   var city = document.getElementById("city").value;
@@ -51,6 +52,7 @@ function storeData() {
     fatherLastName === "" ||
     motherFirstName === "" ||
     motherLastName === "" ||
+    gender === ""||
     nationality === "" ||
     streetAddress === "" ||
     city === "" ||
@@ -103,6 +105,7 @@ function storeData() {
             fatherLastName: fatherLastName,
             motherFirstName: motherFirstName,
             motherLastName: motherLastName,
+            gender : gender,
             nationality: nationality,
             streetAddress: streetAddress,
             city: city,
