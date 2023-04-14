@@ -10,12 +10,8 @@ function prevStep(step) {
   document.getElementById("step" + (step - 1)).style.display = "block";
 }
 
-
-
-
 // Function to validate the form
 function storeData() {
-
   // Get form elements
   var firstName = document.getElementById("firstName").value;
   var lastName = document.getElementById("lastName").value;
@@ -36,10 +32,8 @@ function storeData() {
   var sscInstitution = document.getElementById("sscInstitution").value;
   var sscBoard = document.getElementById("sscBoard").value;
   var sscScore = document.getElementById("sscScore").value;
-  var currentlyPursuing =
-    document.getElementById("currentlyPursuing").value;
-  var currentInstitution =
-    document.getElementById("currentInstitution").value;
+  var currentlyPursuing = document.getElementById("currentlyPursuing").value;
+  var currentInstitution = document.getElementById("currentInstitution").value;
   var overallScore = document.getElementById("overallScore").value;
   var backlogs = document.getElementById("backlogs").value;
   var photo = document.getElementById("photo").files[0];
@@ -47,6 +41,34 @@ function storeData() {
   var sscMarksheet = document.getElementById("sscMarksheet").files[0];
   var allMarksheets = document.getElementById("allMarksheets").files[0];
 
+  // Perform validation
+  if (
+    firstName === "" ||
+    lastName === "" ||
+    dob === "" ||
+    email === "" ||
+    fatherFirstName === "" ||
+    fatherLastName === "" ||
+    motherFirstName === "" ||
+    motherLastName === "" ||
+    nationality === "" ||
+    streetAddress === "" ||
+    city === "" ||
+    country === "" ||
+    mobile === "" ||
+    hscInstitution === "" ||
+    hscBoard === "" ||
+    hscScore === "" ||
+    sscInstitution === "" ||
+    sscBoard === "" ||
+    sscScore === "" ||
+    currentlyPursuing === "" ||
+    currentInstitution === "" ||
+    overallScore === "" ||
+    backlogs === ""
+  ) {
+    alert("Please fill in all fields");
+  }
 
   // Convert photo and marksheets files to Base64 strings
   var photoUrl = "";
@@ -105,7 +127,7 @@ function storeData() {
           // Save form data in localStorage
           localStorage.setItem("formData", JSON.stringify(formData));
           alert("Form data saved in localStorage!");
-          window.location.reload();
+          window.location.href = "applicant.html"
         };
         fileReader4.readAsDataURL(allMarksheets);
       };
@@ -115,6 +137,3 @@ function storeData() {
   };
   fileReader.readAsDataURL(photo);
 }
-
-
-
