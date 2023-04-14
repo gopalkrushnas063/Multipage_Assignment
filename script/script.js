@@ -115,3 +115,6 @@ function storeData() {
   };
   fileReader.readAsDataURL(photo);
 }
+
+
+
