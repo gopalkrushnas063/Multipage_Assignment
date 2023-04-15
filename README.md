@@ -60,6 +60,16 @@
 
 <hr>
 
+## Setup
+To run this project, install VS Code locally and run live server:
+
+```
+$ git clone https://github.com/gopalkrushnas063/Multipage_Assignment/
+$ Install Live server Plugin
+$ Click Go To Live
+```
+
+<hr>
 
 ### The flow of the project would typically involve the following steps:
 #### Desktop View :
@@ -68,6 +78,9 @@
 ![image](https://user-images.githubusercontent.com/103574856/232232503-35f21793-4be3-4e03-985d-226b3d36ea91.png)
 ![image](https://user-images.githubusercontent.com/103574856/232233032-ebc0e0ef-85e4-40bb-a9bc-df37c3529e66.png)
 ![image](https://user-images.githubusercontent.com/103574856/232234214-5d74d6e0-4956-49f3-a250-c47637406522.png)
+
+
+
 
 ## Note : Please clear your local storage before using this application to ensure a better user experience. 
 
