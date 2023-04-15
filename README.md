@@ -62,8 +62,11 @@
 
 
 ### The flow of the project would typically involve the following steps:
+#### Desktop View :
+
 ![image](https://user-images.githubusercontent.com/103574856/232232461-7f658e00-8317-4e65-b68d-25c72fa9da88.png)
 ![image](https://user-images.githubusercontent.com/103574856/232232503-35f21793-4be3-4e03-985d-226b3d36ea91.png)
+![image](https://user-images.githubusercontent.com/103574856/232233032-ebc0e0ef-85e4-40bb-a9bc-df37c3529e66.png)
 
 ## Note : Please clear your local storage before using this application to ensure a better user experience. 
 
