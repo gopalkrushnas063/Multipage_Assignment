@@ -1,6 +1,6 @@
 <h2 align="center">✩░▒▓▆▅▃▂▁📚𝐌𝐮𝐥𝐭𝐢-𝐏𝐚𝐠𝐞 𝐖𝐞𝐛 𝐀𝐩𝐩𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧📚▁▂▃▅▆▓▒░✩</h2>
 <h2>Project Summary 📚 :</h2>
-<p align="justify">The project involves creating a multi-page web application that allows users to upload files, which are then stored in local storage. Users can retrieve their uploaded files at any time by accessing the application. The application is designed to be user-friendly and intuitive, with a clear and easy-to-use interface. The project also includes features such as error handling and validation to ensure that the user experience is seamless and error-free. Overall, the project aims to provide a convenient and efficient way for users to upload and store files locally.</p>
+<p align="justify">The project involves creating a multi-page web application that allows users to upload files, which are then stored in local storage. Users can retrieve their uploaded files at any time by accessing the application. The application is designed to be user-friendly and intuitive, with a clear and easy-to-use interface. The project also includes features such as error handling and validation to ensure that the user experience is seamless and error-free. Overall, the project aims to provide a convenient and efficient way for users to upload and store files locally. I have ensured proper responsiveness and validation in this project, with a progressive form that stores data in local storage. Users will also be able to view their submissions after completing the application.</p>
 
 
 <hr>
@@ -59,3 +59,20 @@
 </table>
 
 <hr>
+
+
+### The flow of the project would typically involve the following steps:
+![image](https://user-images.githubusercontent.com/103574856/232232461-7f658e00-8317-4e65-b68d-25c72fa9da88.png)
+![image](https://user-images.githubusercontent.com/103574856/232232503-35f21793-4be3-4e03-985d-226b3d36ea91.png)
+
+## Note : Please clear your local storage before using this application to ensure a better user experience. 
+
+### Here’s how to clear the local storage in Google Chrome:
+
+- [ ] Open the Google Chrome Console by pressing F12 key.
+- [ ] Select “Application” in the console’s top menu.
+- [ ] Select “Local Storage” in the console’s left menu.
+- [ ] Right click your site(s) and click clear to delete the local storage.
+
+![kgxe23xd_eytz_sqwxwi8sm0ig8_hOhWvLzHCY41660166518223-clear-local-storage](https://user-images.githubusercontent.com/103574856/232232009-5e6df8d0-5d66-44ea-b6be-a67dcd6ff664.png)
+
