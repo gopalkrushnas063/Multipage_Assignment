@@ -129,7 +129,7 @@ function storeData() {
 
           // Save form data in localStorage
           localStorage.setItem("formData", JSON.stringify(formData));
-          alert("Form data saved in localStorage!");
+          alert("Registration Done Successfully!");
           window.location.href = "applicant.html"
         };
         fileReader4.readAsDataURL(allMarksheets);
