@@ -90,6 +90,20 @@ $ Click Go To Live
 - [ ] Select “Application” in the console’s top menu.
 - [ ] Select “Local Storage” in the console’s left menu.
 - [ ] Right click your site(s) and click clear to delete the local storage.
+- [ ] Please ensure that you upload documents with a minimum size.
+- [ ] After completing the clearing process, please refresh your browser before filling out the form.
 
 ![kgxe23xd_eytz_sqwxwi8sm0ig8_hOhWvLzHCY41660166518223-clear-local-storage](https://user-images.githubusercontent.com/103574856/232232009-5e6df8d0-5d66-44ea-b6be-a67dcd6ff664.png)
 
+
+<br>
+
+## Conslusion
+
+<p align="justify">In conclusion, this project has been a valuable learning experience for me. Through this project, I was able to apply the knowledge and skills I have gained throughout my studies and develop new ones.</p>
+
+<p align="justify">The project allowed me to work independently. I was able to effectively add the functionality, and manage my time to ensure that I completed the project within the designated timeframe.I encountered some challenges along the way, such as technical difficulties and conflicting ideas, but I learned to overcome them through perseverance, creativity, and compromise.I encountered some challenges along the way, such as technical difficulties and conflicting ideas, but I learned to overcome them through perseverance, creativity, and compromise.</p>
+
+<p align="justify">Overall, I am proud of the outcome of this project. I believe that it showcases my hard work, dedication, and creativity. I also believe that it will be a valuable addition to further interview process.  It was a rewarding experience, and I am grateful for the opportunity to have been a part of it.</p>
+
+<h2 align="center">✴.·´¯`·.·★  🎀Thank You🎀  ★·.·`¯´·.✴</h2>
