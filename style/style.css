@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f1f1f1;
+  background-color: lightblue;
 }
 
 form {
@@ -71,6 +71,14 @@ input[type="button"]{
 
 
 #gender {
+  width: 103%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#nationality {
   width: 103%;
   padding: 10px;
   border: 1px solid #ccc;

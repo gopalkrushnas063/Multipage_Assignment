@@ -2,8 +2,7 @@
 let data = JSON.parse(localStorage.getItem("formData")) || [];
 
 //Personal Details :
-document.getElementById("name").innerText =
-  data.firstName + " " + data.lastName;
+document.getElementById("name").innerText = data.name;
 document.getElementById("fathersName").innerText =
   data.fatherFirstName + " " + data.fatherLastName;
 document.getElementById("fatherName").innerText =
@@ -15,7 +14,7 @@ document.getElementById("gender").innerText = data.gender;
 document.getElementById("streetAddress").innerText = data.streetAddress;
 document.getElementById("city").innerText = data.city;
 document.getElementById("country").innerText = data.country;
-document.getElementById("mobile").innerText = data.mobile;
+document.getElementById("mobile").innerText =data.country_code+" "+data.mobile;
 document.getElementById("dob").innerText = data.dob;
 
 //Educational Deatils :
