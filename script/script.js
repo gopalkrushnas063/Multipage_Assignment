@@ -133,7 +133,7 @@ function storeData() {
   if (validateCGPA(hscScore)) {
     console.log("Valid CGPA");
   } else {
-    alert("Invalid CGPA");
+    alert("Invalid HSC CGPA");
   }
 
   // Perform validation
@@ -162,75 +162,78 @@ function storeData() {
     currentlyPursuing === "" ||
     currentInstitution === "" ||
     overallScore === "" ||
-    backlogs === "" ||
+    backlogs === ""
   ) {
     alert("Please fill in all fields");
   }
 
-  // Convert photo and marksheets files to Base64 strings
-  var photoUrl = "";
-  var hscMarksheetUrl = "";
-  var sscMarksheetUrl = "";
-  var allMarksheetsUrl = "";
+  if (isValidMobileNumber && validatePincode && validateCGPA) {
+    // Convert photo and marksheets files to Base64 strings
+    var photoUrl = "";
+    var hscMarksheetUrl = "";
+    var sscMarksheetUrl = "";
+    var allMarksheetsUrl = "";
 
-  var fileReader = new FileReader();
+    var fileReader = new FileReader();
 
-  fileReader.onload = function () {
-    photoUrl = fileReader.result;
+    fileReader.onload = function () {
+      photoUrl = fileReader.result;
 
-    var fileReader2 = new FileReader();
-    fileReader2.onload = function () {
-      hscMarksheetUrl = fileReader2.result;
+      var fileReader2 = new FileReader();
+      fileReader2.onload = function () {
+        hscMarksheetUrl = fileReader2.result;
 
-      var fileReader3 = new FileReader();
-      fileReader3.onload = function () {
-        sscMarksheetUrl = fileReader3.result;
+        var fileReader3 = new FileReader();
+        fileReader3.onload = function () {
+          sscMarksheetUrl = fileReader3.result;
 
-        var fileReader4 = new FileReader();
-        fileReader4.onload = function () {
-          allMarksheetsUrl = fileReader4.result;
+          var fileReader4 = new FileReader();
+          fileReader4.onload = function () {
+            allMarksheetsUrl = fileReader4.result;
 
-          // Create an object to store form data
-          var formData = {
-            name: name,
-            dob: dob,
-            email: email,
-            fatherFirstName: fatherFirstName,
-            fatherLastName: fatherLastName,
-            motherFirstName: motherFirstName,
-            motherLastName: motherLastName,
-            gender: gender,
-            nationality: nationality,
-            streetAddress: streetAddress,
-            city: city,
-            country: country,
-            mobile: mobile,
-            hscInstitution: hscInstitution,
-            hscBoard: hscBoard,
-            hscScore: hscScore,
-            sscInstitution: sscInstitution,
-            sscBoard: sscBoard,
-            sscScore: sscScore,
-            currentlyPursuing: currentlyPursuing,
-            currentInstitution: currentInstitution,
-            overallScore: overallScore,
-            backlogs: backlogs,
-            photo: photoUrl,
-            hscMarksheet: hscMarksheetUrl,
-            sscMarksheet: sscMarksheetUrl,
-            allMarksheets: allMarksheetsUrl,
+            // Create an object to store form data
+            var formData = {
+              name: name,
+              dob: dob,
+              email: email,
+              fatherFirstName: fatherFirstName,
+              fatherLastName: fatherLastName,
+              motherFirstName: motherFirstName,
+              motherLastName: motherLastName,
+              gender: gender,
+              nationality: nationality,
+              streetAddress: streetAddress,
+              city: city,
+              country: country,
+              country_code : country_code,
+              mobile: mobile,
+              hscInstitution: hscInstitution,
+              hscBoard: hscBoard,
+              hscScore: hscScore,
+              sscInstitution: sscInstitution,
+              sscBoard: sscBoard,
+              sscScore: sscScore,
+              currentlyPursuing: currentlyPursuing,
+              currentInstitution: currentInstitution,
+              overallScore: overallScore,
+              backlogs: backlogs,
+              photo: photoUrl,
+              hscMarksheet: hscMarksheetUrl,
+              sscMarksheet: sscMarksheetUrl,
+              allMarksheets: allMarksheetsUrl,
+            };
+
+            // Save form data in localStorage
+            localStorage.setItem("formData", JSON.stringify(formData));
+            alert("Registration Done Successfully!");
+            window.location.href = "applicant.html";
           };
-
-          // Save form data in localStorage
-          localStorage.setItem("formData", JSON.stringify(formData));
-          alert("Registration Done Successfully!");
-          window.location.href = "applicant.html";
+          fileReader4.readAsDataURL(allMarksheets);
         };
-        fileReader4.readAsDataURL(allMarksheets);
+        fileReader3.readAsDataURL(sscMarksheet);
       };
-      fileReader3.readAsDataURL(sscMarksheet);
+      fileReader2.readAsDataURL(hscMarksheet);
     };
-    fileReader2.readAsDataURL(hscMarksheet);
-  };
-  fileReader.readAsDataURL(photo);
+    fileReader.readAsDataURL(photo);
+  }
 }

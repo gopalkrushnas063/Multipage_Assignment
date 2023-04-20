@@ -14,13 +14,13 @@ document.getElementById("gender").innerText = data.gender;
 document.getElementById("streetAddress").innerText = data.streetAddress;
 document.getElementById("city").innerText = data.city;
 document.getElementById("country").innerText = data.country;
-document.getElementById("mobile").innerText =data.country_code+" "+data.mobile;
+document.getElementById("mobile").innerText =`${data.country_code} ${data.mobile}`;
 document.getElementById("dob").innerText = data.dob;
 
 //Educational Deatils :
 document.getElementById("hscInstitution").innerText = data.hscInstitution;
 document.getElementById("hscBoard").innerText = data.hscBoard;
-document.getElementById("hscScore").innerText = data.hscScore + "%";
+document.getElementById("hscScore").innerText = data.hscScore + " CGPA";
 document.getElementById("sscInstitution").innerText = data.sscInstitution;
 document.getElementById("sscBoard").innerText = data.sscBoard + "%";
 document.getElementById("sscBoard").innerText = data.sscBoard;
